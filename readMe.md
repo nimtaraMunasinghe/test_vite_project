@@ -1,4 +1,4 @@
-#Challenge
+###Challenge
 In this one-hour challenge, you are required to create a Library Management System using React
 with state management using either Context API or Redux. The system should be able to perform
 basic CRUD operations on books and users.
@@ -13,7 +13,7 @@ phone number, and borrowed books.
 • Navigation: Implement navigation to switch between the pages.
 • State Management: Use either Context API or Redux for state management.
 
-#Evaluation Criteria:
+###Evaluation Criteria:
 Your assignment will be evaluated based on the following criteria:
 • Functionality: Does the Library Management System meet the requirements specified
 above?
