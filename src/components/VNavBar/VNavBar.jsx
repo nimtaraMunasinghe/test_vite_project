@@ -12,6 +12,7 @@ import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
+import { Link } from "react-router-dom";
 
 const pages = ["Home", "Books", "Blog"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
@@ -34,7 +35,6 @@ function VNavBar() {
   const handleCloseUserMenu = () => {
     setAnchorElUser(null);
   };
-  console.log("ResponsiveAppBar");
   return (
     <AppBar
       sx={{
@@ -130,17 +130,26 @@ function VNavBar() {
             }}
           >
             {pages.map((page) => (
-              <Button
-                key={page}
-                onClick={handleCloseNavMenu}
-                sx={{
-                  my: 2,
+              <Link
+                style={{
+                  textDecoration: "none",
                   color: "inherit",
-                  display: "block",
                 }}
+                to={`/${page === "Home" ? "" : page.toLowerCase()}`}
               >
-                {page}
-              </Button>
+                <Typography
+                  key={page}
+                  onClick={handleCloseNavMenu}
+                  sx={{
+                    my: 2,
+                    color: "inherit",
+                    display: "block",
+                    cursor: "pointer",
+                  }}
+                >
+                  {page}
+                </Typography>
+              </Link>
             ))}
           </Box>
 
