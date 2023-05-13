@@ -6,6 +6,10 @@ import {
   getUsers,
 } from "../../redux/features/userSlice";
 import { useFormik } from "formik";
+import VButton from "../../components/VButton/VButton";
+import { Paper, Typography } from "@mui/material";
+import SingleRow from "../../components/SingleRow/SingleRow";
+import Table from "../../components/Table/Table";
 
 const Homepage = () => {
   const users = useSelector(getUsers);
@@ -77,7 +81,18 @@ const Homepage = () => {
           onChange={handleChange}
         />
         <button type="submit">Submit</button>
+        <VButton
+          label="Submit"
+          buttonStyles={{
+            py: 1,
+            px: 4,
+            backgroundColor: "#000",
+            color: "#fff",
+            borderRadius: "64px",
+          }}
+        />
       </form>
+      <Table />
     </>
   );
 };
