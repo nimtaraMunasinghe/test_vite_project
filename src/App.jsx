@@ -1,12 +1,12 @@
 import { Route, Routes } from "react-router-dom";
-import TopNavigationBar from "./components/Navigation/TopNavigationBar";
+import VNavBar from "./components/VNavBar/VNavBar";
 import Homepage from "./pages/Home";
 import BookCase from "./pages/Book";
 
 function App() {
   return (
     <>
-      <TopNavigationBar />
+      <VNavBar />
       <Routes>
         <Route path="/" element={<Homepage />} />
         <Route path="/books" element={<BookCase />} />
